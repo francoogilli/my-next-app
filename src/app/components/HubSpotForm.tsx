@@ -59,6 +59,7 @@ export default function HubSpotForm() {
           <input
             type="tel"
             value={phone}
+            className="text-black"
             onChange={(e) => setPhone(e.target.value)}
           />
         </label>
@@ -69,13 +70,14 @@ export default function HubSpotForm() {
           <input
             type="text"
             value={publicidad}
+            className="text-black"
             onChange={(e) => setPublicidad(e.target.value)}
             required
           />
         </label>
       </div>
       <button type="submit">Enviar</button>
-      {status && <p>{status}</p>}
+      {status && <p className="text-yellow-400">{status}</p>}
     </form>
   );
 }
